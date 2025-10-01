@@ -7,7 +7,7 @@ continuum models. A new version VASPsol++, has been released.This page will be
 maintained, however, all updates to VASPsol's code will now feature
 at this new repository : https://github.com/VASPsol/VASPsol/. 
 
-To reiterate, this page is no longer being developed further. Please go to https://github.com/VASPsol/VASPsol/
+**To reiterate, this page is no longer being developed further. Please go to https://github.com/VASPsol/VASPsol/**
 
 
 VAPSsol ++ Paper : https://pubs.aip.org/aip/jcp/article-abstract/159/23/234117/2930317/An-implicit-electrolyte-model-for-plane-wave?redirectedFrom=fulltext
