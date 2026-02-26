@@ -1,7 +1,6 @@
 *~
 
 OUTCAR.ref
-POTCAR
 submit_vasp_job
 PCDAT
 IBZKPT

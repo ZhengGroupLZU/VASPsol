@@ -1,0 +1,55 @@
+NCORE = 8
+NPAR = 8 
+SYSTEM = INCAR-For-VASPSol            # Title of the SYSTEM
+LWAVE = .TRUE.                        # .TRUE. Write WAVECAR
+LCHARG = .TRUE.                       # .TRUE. Write CHGCAR
+ISTART = 1                            # Read existing wavefunction, if there, other wise ISTART = 0
+ISMEAR = 0                            # Gaussian smearing, Semiconductors or insulators use 0,   metals : 1)
+SIGMA = 0.05                          # Smearing value in 0.03-0.05 eV semiconductors or insulators, metals:0.2)                        
+ICHARG = 2                            # Default: ICHARG	= 2
+IBRION = -1                           # -1, No Ionic Update (for SCF Calculation)
+POTIM = 0.2                           # 0.5	if IBRION = 1, 2, and 3 (ionic relaxation)
+ISIF = 2                              # Moves ionic positions, if ISIF = 3 moves cell volume and cell shape          
+NSW = 0                               # 0, Maximum number of ionic steps (for SCF Calculation)
+NELM = 300                            # NELM sets the maximum number of electronic self-consistency steps
+NELMIN = 6                            # NELMIN specifies the minimum number of electronic self-consistency steps
+ISYM = 0                              # ISYM= 1 | 2 | 3, switches on the use of symmetry. For ISYM=-1 | 0, the use of symmetry is switched off.
+ISPIN = 2                             # ISPIN = 1 Non-Spin polarised DFT, 2-Spin polarised Calculations
+IDIPOL = 3                            # IDIPOL switches on monopole/dipole and quadrupole corrections to the total energy
+LMAXMIX = 4                           # LMAXMIX to 4 for d-elements and to 6 for f-elements
+ADDGRID = .TRUE.
+ALGO = VeryFast                       # ALGO=VeryFast selects IALGO=48 (RMM-DIIS)
+NELMDL = -20
+AMIX = 0.2
+BMIX = 0.00001
+AMIX_MAG = 0.8
+BMIX_MAG = 0.00001
+LREAL = Auto
+PREC = Accurate
+EDIFF = 1E-06                         # SCF energy convergence, in eV
+EDIFFG = -0.02                        # Ionic convergence, eV/AA)
+ENCUT = 400.0                         # you can find it from POTCAR : ENMAX  =  400.000  (Carbon atom in POTCAR)         
+GGA = PE                              # Perdew-Burke-Ernzerhof (PBE)
+IVDW = 11                             # DFT-D3 method of Grimme with zero-damping function
+
+ 
+####Magnetization####
+LORBIT = 11                           # To get magnetization density
+MAGMOM = 66*0.6 4*0.6 1*5.0           # MAGMOM Specifies the initial magnetic moment for each atom
+
+
+###VASPSol###
+
+LSOL = .TRUE.         #Switch on solvation model
+EB_K = 78.3553        #Dielectric constant of the bulk solvent (Water)
+
+
+###Solvation model###
+#LSOL = .TRUE.        #Switch on solvation model
+#EB_K = 78.3553       #Dielectric constant of the bulk solvent (Water)
+#SIGMA_K = 0.600000   #this is default value [width of the dielectric cavity]
+#NC_K = 0.002500      #this is default value [cutoff charge density]
+#TAU = 0.000525       #this is default value - neglect the the cavitation energy contribution, set TAU = 0 cavity surface tension
+#LAMBDA_D_K = 0       #[3.04l] inearized Poisson-Boltzmann model(electrolyte model) Debye length in Angstroms,  was set to 3.04 Å to simulate 1M condition.
+#LRHOB = F            #write boundcharge  density 
+#LRHOION = F          #write ioniccharge density
