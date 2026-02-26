@@ -1,5 +1,7 @@
 *~
 
+REPORT
+*.h5
 OUTCAR.ref
 submit_vasp_job
 PCDAT
